@@ -11,6 +11,49 @@ public class JavaDeveloper extends JobOffer {
 
 	private String email = "talent@fon.com";
 
+	public FonDevelopper myCandidature (){
+		
+		FonDevelopper fonDev = new FonDevelopper ();
+		//My Name
+		fonDev.setName("Roi");
+		
+		//My Surname
+		fonDev.setSurname("V&acute;zquez Morandeira");
+		
+		//Email
+		fonDev.setMail("rmorandeira@gmail.com");
+		
+		//URL
+		fonDev.setULR("http://rmorandeira.xyz");
+		
+		List<String> skills = new ArrayList();
+		
+		skills.add("Java");
+		skills.add("jQuery");
+		skills.add("CSS");
+		skills.add("HTML");
+		skills.add("GIT");
+		skills.add("SVN");
+		skills.add("Agile/SCRUM");
+		skills.add("GIT");
+		
+		fonDev.setSkillList(skills);
+		
+		List<String> habilities = new ArrayList();
+		
+		habilities.add("Design");
+		habilities.add("Creative");
+		habilities.add("Fast learning");
+		habilities.add("Creative Coding");
+		
+		fonDev.setHabilities(habilities);
+		
+		fonDev.isTheChosenOne(true);
+		
+		return fonDev;
+		
+	}
+
 	public FonDevelopper getRecruit() {
 
 		// What do we require?
@@ -43,7 +86,9 @@ public class JavaDeveloper extends JobOffer {
 		// How many results do we need?
 		db.limit(1);
 
-		return db.execute();
+		//return db.execute();
+		
+		return myCandidature();
 	}
 
 	public List<String> getActualProjects() {
